@@ -13,22 +13,7 @@ class XmlData extends Component {
     componentDidMount() {
         this._isMounted = true;
         var url = "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"
-        //   fetch(url)
-
-        //     .then((response) =>console.log('pradeep',response()) )
-
-        //     .then((responseText) => {
-        //    parseString(responseText, function (err, result) {
-        //      console.log(result);
-        //      return result;
-        //     });
-        //   this.setState({
-        //     datasource : result
-        //     })
-        //    })
-        // .catch((error) => {
-        //   console.log('Error fetching the feed: ', error);
-        // });
+ 
         const parseString = require('react-native-xml2js').parseString;
         fetch(url)
             .then(response => response.text())
@@ -107,7 +92,7 @@ class XmlData extends Component {
       }
     
       _handleTextReady = () => {
-        // ...
+        
       }
     }
 
